@@ -40,7 +40,7 @@ public class ContactManager {
         return null;
     }
 
-    // Save contacts to a file using serialization
+    // This saving uses Serializaition and its not my code
     public void saveContacts(String filename) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
             oos.writeObject(contacts);
@@ -49,7 +49,7 @@ public class ContactManager {
         }
     }
 
-    // Load contacts from a file using deserialization
+    // same as saving but with deserialization also dont know what it does
     @SuppressWarnings("unchecked")
     public void loadContacts(String filename) {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(filename))) {
@@ -66,7 +66,7 @@ public class ContactManager {
         }
     }
 
-    // Get all contacts (for GUI)
+    // Get all contacts (for GUI, I copied a small one from ai)
     public List<Contact> getContacts() {
         return contacts;
     }
